@@ -1,0 +1,82 @@
+<html>  
+  <head>  
+        <meta charset="utf-8">  
+        <title>中国地图</title>  
+  </head> 
+<style>
+
+.counties {
+  fill: none;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
+
+.q0-9 { fill:rgb(247,251,255); }
+.q1-9 { fill:rgb(222,235,247); }
+.q2-9 { fill:rgb(198,219,239); }
+.q3-9 { fill:rgb(158,202,225); }
+.q4-9 { fill:rgb(107,174,214); }
+.q5-9 { fill:rgb(66,146,198); }
+.q6-9 { fill:rgb(33,113,181); }
+.q7-9 { fill:rgb(8,81,156); }
+.q8-9 { fill:rgb(8,48,107); }
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+	var width  = 1000;
+	var height = 1000;
+	
+	var svg = d3.select("body").append("svg")
+	    .attr("width", width)
+	    .attr("height", height)
+	    .append("g")
+	    .attr("transform", "translate(0,0)");
+	
+	var projection = d3.geo.mercator()
+						.center([107, 31])
+						.scale(850)
+    					.translate([width/2, height/2]);
+	
+	var path = d3.geo.path()
+					.projection(projection);
+	
+	
+	var color = d3.scale.category20();
+	
+	
+	d3.json("china.geojson", function(error, root) {
+		
+		if (error) 
+			return console.error(error);
+		console.log(root.features);
+		
+		svg.selectAll("path")
+			.data( root.features )
+			.enter()
+			.append("path")
+			.attr("stroke","#000")
+			.attr("stroke-width",1)
+			.attr("fill", function(d,i){
+				return color(i);
+			})
+			.attr("d", path )
+			.on("mouseover",function(d,i){
+                d3.select(this)
+                    .attr("fill","yellow");
+            })
+            .on("mouseout",function(d,i){
+                d3.select(this)
+                    .attr("fill",color(i));
+            });
+		
+	});
+
+</script>
+	
+</body>  
+</html>  
