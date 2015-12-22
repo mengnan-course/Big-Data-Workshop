@@ -1,0 +1,26 @@
+{
+  "name": "jgraph",
+  "version": "0.2.0",
+  "description": "An embeddable webGL graph visualization library.",
+  "main": "js/jgraph.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/patrickfuller/jgraph.git"
+  },
+  "author": "Patrick Fuller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patrickfuller/jgraph/issues"
+  },
+  "homepage": "https://github.com/patrickfuller/jgraph",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "three": "^0.71.0"
+  }
+}
