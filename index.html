@@ -73,23 +73,6 @@
           <li><a href="https://github.com/mengnan-course/Big-Data-Workshop">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
-
-<!--       <section>
-        <uk>
-          <li><a href="#title">The Influence of Chinese Culture</a>
-            <uk>
-              <li><a href="#knn">k-Nearest Neighbor</a></li>
-              <li><a href="#val">Validation sets, Cross-validation, hyperparameter tuning</a></li>
-              <li><a href="#procon">Pros/Cons of Nearest Neighbor</a></li>
-              <li><a href="#summary">Summary</a></li>
-              <li><a href="#summaryapply">Summary: Applying kNN in practice</a></li>
-              <li><a href="#reading">Further Reading</a></li>
-            </uk>
-          </li>
-        </uk>
-      </section> -->
-
-
     </div>
 
     <div id="site_nav">
@@ -118,16 +101,72 @@
         <p><a name="title"></a></p>
 
         <h1 align="center"> The Influence of Chinese Culture </h1>
-          <p margin-left = '50px'> The following graph shows the total value of EXPORT(every 10000 USD) of different categroies books from year 2008 to year 2013 </p>
+          <p align="justify"> <!-- The following graph shows the total value of EXPORT(every 10000 USD) of different categroies books from year 2008 to year 2013 
+ -->
+        Recent years China offers the greatest growth potential for international culture. Different cultural expressions such as  Chinese opera, kung fu, calligraphy, Confucius Institute, paintings have become more and more popular to people all around the world. The trend of internationalization of the Chinese culture shows a great vitality of chinese culture. This workshop based on some great previous work, however mainly focus on the visualization, in order to exhibit a more popular, more intuitive and clear result. Basiclly this people-friendly web site mean to quantitively show you differnet aspects of chinese culture, let people know the development of chinese culture better and easier and attract more people to engaged in this field. For your convenience, all the visualized data or relevant data source and the link of relevant previous work can be got directly. You may use these for future analysis. What's more, the core culture values reflected from different culture embodiments should be what we cherish most.Although there exist some differences between the Mainland China, Hong Kong, and Taiwan, the core culture values are shared by Chinese People no matter where they are. </p>
 
 
 
 </br></br></br>
           <p><a name="Abstract"></a></p>
           <h2>Abstract</h2>
-          <p>
-            
+          <p align="justify">The purpose of our work is to exhibit the influence of chinese culture from different aspects in different levels. Previous work like (Michel, Jean-Baptiste, et al. science(2011)) investigated the culture trend quantitively based on digitized books and (Schich Maximilian, et al. science(2014)) focused on the emergent processes driving cultural history. Basiclly, most of these works are famous and successful, but wide. Our work based on these previous work but more focus on chinese culture development and influence. What's more, our target audience are normal people they may not have enough specialized knowledge to understand what the great previous work do and what the results mean. Thus, there are many plots included in this website to intuitively show the power of chinese culture in different aspects and in order to make visitors more clear about the plots, there are some brief analysis followed each graph.
           </p>
+
+
+
+
+
+</br></br></br>
+          <p><a name="Brief"></a></p>
+          <h2 align="center">Brief Quantitative Analysis Of Culture With Digitized Books</h2>
+          <p> This part will show you some data about books, another embodiment of culture influence. The dataset collected from many great previous work. Owing to the time limitation, we filter out some expired data and focus on the most useful dataset. Relavent analyses are all based on these data. For you convenience, part of the data have been viualized as graphs.
+
+              <p><a name="BriefData"></a></p>
+              <h3>Data Information</h3> 
+              <p>The data used for this part is from the work [<a href="http://www.sciencemag.org/content/331/6014/176.abstract">Michel, Jean-Baptiste, et al. science(2011)</a>]. You can download the relevant data from the <a href="http://www.sciencemag.org/content/331/6014/176/suppl/DC1">web site</a>(SOM Data). We vituralized some of the information of <b>'number of words'</b> Sheet in order to present some trendency more intuitively.
+              The variables included in the vituralized dataset are: </br></br></p>
+              <ul>
+                <li><b>language:</b>&nbsp&nbsp Language of the corpus used to statis words.</li> 
+                <li><b>date:</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The time point of getting the result.</li> 
+                <li><b>number:</b>&nbsp&nbsp&nbsp&nbsp Total number of words in corpus within the time point.</li> 
+              </ul> 
+              A more direct form can be got from <a href="./PlotCode/3D-show-wheel/raw_data.xlsx">here</a>.The dataset is stored in a excel file(xlsx) including all the corpus information from the year 1850 to 2000.
+          </p><br><br>
+
+
+          <p>The following animation displays the number of words of 4 languages changing from the year 1850 to 2000. It shows from Line graph to donut map in turn.</p>
+          <p><h2 align="center">The number of words in corpus of four languages</h3></p>
+          <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="./PlotCode/3D-show-wheel/index.html" marginwidth="0" marginheight="0" scrolling="no" width='800px' height='500px' frameBorder='0'></iframe>
+          The animation graph above shows all of the following types in turn:
+          <ul style="list-style-type:disc">
+              <li>lines</li>
+              <li>horizons</li>
+              <li>areas</li>
+              <li>stacked areas</li>
+              <li>streamgraph</li>
+              <li>overlapping areas</li>
+              <li>grouped bars</li>
+              <li>stacked bars</li>
+              <li>bars</li>
+              <li>donut</li>
+          </ul>
+          
+
+          <!-- Data Analysis -->
+          <p> The graphs reflect the fact that the number of Chinese words increased quickly in recent years compared with other three languages. Number of Russian words drop a little recently, however the total number is still large and very close to the third one French. While Spanish words increases relative smoothly. From the trendency, it is not hard to see the influence of chinese culture continues to grow. 
+
+
+
+
+
+
+
+
+
+
+          </p>
+
 
           <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="./PlotCode/CumulativeDistribution-Export_USD.html" marginwidth="0" marginheight="0" scrolling="no" width='550px' height='500px' frameBorder='0'></iframe>
 
@@ -182,59 +221,6 @@
                   </tr>
               </tbody>
           </table>
-
-
-
-
-</br></br></br>
-          <p><a name="Brief"></a></p>
-          <h2 align="center">Brief Quantitative Analysis Of Culture With Digitized Books</h2>
-          <p> This part will show you some data about books, another embodiment of culture influence. The dataset collected from many great previous work. Owing to the time limitation, we filter out some expired data and focus on the most useful dataset. Relavent analyses are all based on these data. For you convenience, part of the data have been viualized as graphs.
-
-              <p><a name="BriefData"></a></p>
-              <h3>Data Information</h3> The data used for this part is from the work [<a href='http://www.sciencemag.org/content/331/6014/176.abstract'>Michel, Jean-Baptiste, et al. science(2011)</a>]. You can download the relevant data from the <a herf='http://www.sciencemag.org/content/331/6014/176/suppl/DC1'>web site</a>(SOM Data). We vituralized some of the information of <b>'number of words'</b> Sheet in order to present some trendency more intuitively.
-              The variables included in the vituralized dataset are: </br></br>
-              <ul>
-                <li><b>language:</b>&nbsp&nbsp Language of the corpus used to statis words.</li> 
-                <li><b>date:</b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp The time point of getting the result.</li> 
-                <li><b>number:</b>&nbsp&nbsp&nbsp&nbsp Total number of words in corpus within the time point.</li> 
-              </ul> 
-              A more direct form can be got from <a herf='./PlotCode/3D-show-wheel/raw_data.xlsx'>here</a>.The dataset is stored in a excel file(xlsx) including all the corpus information from the year 1850 to 2000.
-          </p><br><br>
-
-
-          <p>The following animation displays the number of words of 4 languages changing from the year 1850 to 2000. It shows from Line graph to donut map in turn.</p>
-          <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="./PlotCode/3D-show-wheel/index.html" marginwidth="0" marginheight="0" scrolling="no" width='800px' height='500px' frameBorder='0'></iframe>
-          The animation graph above shows all of the following types in turn:
-          <ul style="list-style-type:disc">
-              <li>lines</li>
-              <li>horizons</li>
-              <li>areas</li>
-              <li>stacked areas</li>
-              <li>streamgraph</li>
-              <li>overlapping areas</li>
-              <li>grouped bars</li>
-              <li>stacked bars</li>
-              <li>bars</li>
-              <li>donut</li>
-          </ul>
-          
-
-          <!-- Data Analysis -->
-          <p> The graphs reflect the fact that the number of Chinese words increased quickly in recent years compared with other three languages. Number of Russian words drop a little recently, however the total number is still large and very close to the third one French. While Spanish words increases relative smoothly. From the trendency, it is not hard to see the influence of chinese culture continues to grow. 
-
-
-
-
-
-
-
-
-
-
-          </p>
-
-
 
 
 
