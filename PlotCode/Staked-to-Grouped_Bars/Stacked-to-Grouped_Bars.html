@@ -82,7 +82,17 @@ var rect = layer.selectAll("rect")
     .attr("y", height)
     .attr("width", x.rangeBand())
     .attr("height", 0);
+///////////////////////////////////////
+///////////////////////////////////////
 
+// d3.csv("data_generated.csv", function(data) {
+//   var parse = d3.time.format("%b %Y").parse;
+
+
+
+
+///////////////////////////////////////
+///////////////////////////////////////
 rect.transition()
     .delay(function(d, i) { return i * 10; })
     .attr("y", function(d) { return y(d.y0 + d.y); })

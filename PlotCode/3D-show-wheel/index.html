@@ -18,7 +18,7 @@ svg {
 <script>
 
 var m = [20, 20, 30, 20],
-    w = 960 - m[1] - m[3],
+    w = 720 - m[1] - m[3],
     h = 500 - m[0] - m[2];
 
 var x,
@@ -55,7 +55,7 @@ var area = d3.svg.area()
     .x(function(d) { return x(d.date); })
     .y1(function(d) { return y(d.price); });
 
-d3.csv("stocks.csv", function(data) {
+d3.csv("data_generated.csv", function(data) {
   var parse = d3.time.format("%b %Y").parse;
 
   // Nest stock values by symbol.
@@ -84,7 +84,8 @@ d3.csv("stocks.csv", function(data) {
 
 function lines() {
   x = d3.time.scale().range([0, w - 60]);
-  y = d3.scale.linear().range([h / 4 - 20, 0]);
+  y = d3.scale.linear().range([h / 4 - 20, 0]);      ///////////////////////////////   control the number of variable to show
+                                                     ///////////////////////////////   [h / num -20, 0] :  num is the number you wanna ///////////////////////////////                       to show
 
   // Compute the minimum and maximum date across symbols.
   x.domain([
