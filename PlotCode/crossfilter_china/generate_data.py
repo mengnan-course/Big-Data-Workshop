@@ -1,0 +1,38 @@
+
+China_district = {"Anhui":01,
+                  "Beijing":02,
+                  "Chongqing":03,
+                  "Fujian":04,
+                  "Gansu":05,
+                  "Guangdong":06,
+                  "Guangxi":07,
+                  "Guizhou":8,
+                  "Hainan":9,
+                  "Hebei":10,
+                  "Heilongjiang":11,
+                  "Henan":12,
+                  "HongkongIsland":13,
+                  "Hubei":14,
+                  "Hunan":15,
+                  "Jiangsu":16,
+                  "Jiangxi":17,
+                  "Jilin":18,
+                  "Liaoning":19,
+                  "NeiMongolZizhiqu":20,
+                  "Ningxia":21,
+                  "Qinghai":22,
+                  "Shaanxi":23,
+                  "Shandong":24,
+                  "Shanghai":25,
+                  "Shanxi":26,
+                  "Sichuan":27,
+                  "Taiwan":28,
+                  "Tianjin":29,
+                  "XinjiangUygur":30,
+                  "XizangZizhiqu(Tibet)":31,
+                  "Yunnan":32,
+                  "Zhejiang":33}
+
+
+
+

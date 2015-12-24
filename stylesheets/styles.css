@@ -119,6 +119,31 @@ blockquote {
   font-style:italic;
 }
 
+div.instructor {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+div.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+div.col-md-4 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+div.instructorphoto img {
+  width: 100px;
+  border-radius: 120px;
+  margin-bottom: 10px;
+}
+
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
   color:#333;
@@ -164,7 +189,7 @@ header {
   -webkit-font-smoothing:subpixel-antialiased;
 }
 
-header ul {
+header ul.github {
   list-style:none;
   height:40px;
   padding:0;
@@ -174,25 +199,22 @@ header ul {
   width:270px;
 }
 
-header uk {
-  margin:0 0 20px;
-}
-header li {
+header li.github {
   width:89px;
   float:left;
   border-right:1px solid #e0e0e0;
   height:40px;
 }
 
-header li:first-child a {
+header li.github:first-child a {
   border-radius:5px 0 0 5px;
 }
 
-header li:last-child a {
+header li.github:last-child a {
   border-radius:0 5px 5px 0;
 }
 
-header ul a {
+header ul.github a {
   line-height:1;
   font-size:11px;
   color:#999;
@@ -202,11 +224,11 @@ header ul a {
   height:34px;
 }
 
-header ul a:hover {
+header ul.github a:hover {
   color:#999;
 }
 
-header ul a:active {
+header ul.github a:active {
   background-color:#f0f0f0;
 }
 
@@ -215,12 +237,12 @@ strong {
   font-weight:700;
 }
 
-header ul li + li + li {
+header ul.github li.github + li.github + li.github {
   border-right:none;
   width:89px;
 }
 
-header ul a strong {
+header ul.github a strong {
   font-size:14px;
   display:block;
   color:#222;
