@@ -144,7 +144,7 @@ function horizons() {
     .append("clipPath")
       .attr("id", "clip")
     .append("rect")
-      .attr("width", w)
+      .attr("width", w + 10 )
       .attr("height", h / 4 - 20);
 
   var color = d3.scale.ordinal()
@@ -163,7 +163,7 @@ function horizons() {
 
   g.select("text").transition()
       .duration(duration)
-      .attr("transform", function(d) { return "translate(" + (w - 60) + "," + (h / 4 - 20) + ")"; })
+      .attr("transform", function(d) { return "translate(" + (w - 60) + "," + (h / 4 - 25) + ")"; })
       .attr("dy", "0em");
 
   g.each(function(d) {
