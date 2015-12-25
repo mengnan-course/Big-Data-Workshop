@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="nations.css" charset="utf-8">
 <style>
   #chart {
-    margin-left: -40px;
+    margin-left: -30px;/*//////////////////////////////////// control the position of the plot//////////////////////////////////////*/
     height: 506px;
   }
 
@@ -29,7 +29,7 @@
   }
 
   .year.label {
-    font: 500 196px "Helvetica Neue";
+    font: 500 150px "Helvetica Neue";/*//////////////////////// change the size of the counting year ////////////////////////////////*/
     fill: #ddd;
   }
 
@@ -87,8 +87,8 @@
       bottom: 19.5,
       left: 39.5
     },
-    width = 960 - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 650 - margin.right,////////////////////////////////////////////////////  control the width  /////////////////////////////
+    height = 420 - margin.top - margin.bottom;/////////////////////////////////////  control the height  ////////////////////////////
 
   // Various scales. These domains make assumptions of data, naturally.
   var xScale = d3.scale.log().domain([300, 1e5]).range([0, width]),
@@ -102,7 +102,7 @@
 
   var tip = d3.tip()
     .attr('class', 'd3-tip')
-    .offset([100, -300])
+    .offset([0, 0])/////////////////////////////////////////////////////// control the  tips position /////////////////////////////////
     .html(function(d) {
       console.log(d);
       return d.name + "<br> Life Expectancy: " + Math.round(d.lifeExpectancy) + "<br> Income per capita: $" + Math.round(d.income);
