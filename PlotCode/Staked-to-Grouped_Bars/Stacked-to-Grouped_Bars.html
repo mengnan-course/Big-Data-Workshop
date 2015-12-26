@@ -34,8 +34,25 @@ form {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var n = 4, // number of layers
-    m = 58, // number of samples per layer
+/////////////////////////// add by mengnan ///////////////////////////////////
+var parseDate = d3.time.format("%Y").parse,
+    formatYear = d3.format("02d"),
+    formatDate = function(d) { return formatYear(d.getFullYear()); };
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+// d3.csv("data_generated.csv", function(data) {
+//   var parse = d3.time.format("%b %Y").parse;
+// d3.tsv("Export_USD.tsv", function(error, data) {
+
+//   data.forEach(function(d) {
+//     d.date = parseDate(d.date);
+//     d.value = +d.value;
+//   });
+// var dataByGroup = nest.entries(data);
+
+
+var n = 6, // number of layers
+    m = 16, // number of samples per layer
     stack = d3.layout.stack(),
     layers = stack(d3.range(n).map(function() { return bumpLayer(m, .1); })),
     yGroupMax = d3.max(layers, function(layer) { return d3.max(layer, function(d) { return d.y; }); }),
@@ -46,7 +63,7 @@ var margin = {top: 40, right: 10, bottom: 20, left: 10},
     height = 500 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
-    .domain(d3.range(m))
+    .domain(d3.range(0,m+3))///////////////////////////////////////////// change the xAxis
     .rangeRoundBands([0, width], .08);
 
 var y = d3.scale.linear()
@@ -77,7 +94,7 @@ var layer = svg.selectAll(".layer")
 
 var rect = layer.selectAll("rect")
     .data(function(d) { return d; })
-  .enter().append("rect")
+    .enter().append("rect")
     .attr("x", function(d) { return x(d.x); })
     .attr("y", height)
     .attr("width", x.rangeBand())
@@ -144,20 +161,20 @@ function transitionStacked() {
 // Inspired by Lee Byron's test data generator.
 function bumpLayer(n, o) {
 
-  function bump(a) {
-    var x = 1 / (.1 + Math.random()),
-        y = 2 * Math.random() - .5,
-        z = 10 / (.1 + Math.random());
-    for (var i = 0; i < n; i++) {
-      var w = (i / n - y) * z;
-      a[i] += x * Math.exp(-w * w);
-    }
-  }
+  // function bump(a) {
+  //   var x = 1 / (.1 + Math.random()),
+  //       y = 2 * Math.random() - .5,
+  //       z = 10 / (.1 + Math.random());
+  //   for (var i = 0; i < n; i++) {
+  //     var w = (i / n - y) * z;
+  //     a[i] += x * Math.exp(-w * w);
+  //   }
+  // }
 
-  var a = [], i;
-  for (i = 0; i < n; ++i) a[i] = o + o * Math.random();
-  for (i = 0; i < 5; ++i) bump(a);
-  return a.map(function(d, i) { return {x: i, y: Math.max(0, d)}; });
+  // var a = [], i;
+  // for (i = 0; i < n; ++i) a[i] = o + o * Math.random();
+  // for (i = 0; i < 5; ++i) bump(a);
+  // return a.map(function(d, i) { return {x: i, y: Math.max(0, d)}; });
 }
 
 </script>
